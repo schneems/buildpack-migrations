@@ -16,6 +16,12 @@ if [ -d "$env_dir" ]; then
   done
 fi
 
+echo $PATH
+echo $GEM_PATH
+echo $build_dir
+ls $build_dir
+echo `bundle list`
+
 db_url=`cat ${3}/DATABASE_URL`
 migrations_done=(`psql ${db_url} --command="SELECT * FROM schema_migrations ORDER BY version DESC" --tuples-only`)
 
