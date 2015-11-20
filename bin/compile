@@ -20,7 +20,7 @@ echo $PATH
 echo $GEM_PATH
 echo $build_dir
 ls $build_dir
-export "GEMFILE=$build_dir/Gemfile"
+export "BUNDLE_GEMFILE=$build_dir/Gemfile"
 echo `bundle list`
 
 db_url=`cat ${3}/DATABASE_URL`
